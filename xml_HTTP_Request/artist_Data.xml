@@ -1,23 +1,23 @@
 <artists>
-    <artist id="artist1">
+    <artist>
     <artistName>'Autechre'</artistName>
     <album>'Quaristice'</album>
     <label>'Warp Records'</label>
     <year>'2008'</year>
     </artist>
-    <artist id="artist2">
+    <artist>
     <artistName>'Autechre'</artistName>
     <album>'Quaristice'</album>
     <label>'Warp Records'</label>
     <year>'2008'</year>
     </artist>
-    <artist id="artist3">
+    <artist>
     <artistName>'Autechre'</artistName>
     <album>'Quaristice'</album>
     <label>'Warp Records'</label>
     <year>'2008'</year>
     </artist>
-    <artist id="artist4">
+    <artist>
     <artistName>'Autechre'</artistName>
     <album>'Quaristice'</album>
     <label>'Warp Records'</label>

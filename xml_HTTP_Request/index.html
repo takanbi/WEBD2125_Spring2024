@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Data Update</title>
+</head>
+<body>
+
+<script>
+    // Assuming you have an XML file named data.xml
+    const xmlFile = 'artist_Data.xml';
+
+    // Function to load and update XML data
+    function updateXML() {
+        // Create a new XMLHttpRequest object
+        const xhttp = new XMLHttpRequest();
+
+        // Define the function to be executed on successful data retrieval
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Parse the XML response
+                const xmlDoc = this.responseXML;
+                let artist = xmlDoc.getElementsByTagName(artist);
+                console.log(artist)
+                // Update data in the XML DOM as needed
+                // For example, change the value of an element with id 'exampleElement'
+                // const elementToUpdate = xmlDoc.getElementById('exampleElement');
+                // if (elementToUpdate) {
+                //     elementToUpdate.textContent = 'New Value';
+                // }
+
+                // Update the DOM with the modified XML data
+                document.getElementById('result').innerText = new XMLSerializer().serializeToString(xmlDoc);
+            }
+        };
+
+        // Open and send the request to load the XML file
+        xhttp.open('GET', xmlFile, true);
+        xhttp.send();
+    }
+
+    // Call the updateXML function when the page loads
+    window.onload = updateXML;
+</script>
+
+<div id="result"></div>
+
+</body>
+</html>

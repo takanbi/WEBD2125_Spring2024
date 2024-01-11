@@ -24,6 +24,7 @@ function getArtist(aaa) {
     let output = "<tr><th>Artist</th><th>Album</th><th>Label</th><th>Year</th></tr>";
     let artistList;
     let x = items.getElementsByTagName('artist');
+   
     // let container = document.getElementById("container");
     // console.log(container);
     console.log(x);
