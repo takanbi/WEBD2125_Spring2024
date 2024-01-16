@@ -8,7 +8,34 @@
 
 #container {
   width: 100%;
+}
+#container .artists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  background-color: #FF3CAC;
-  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  padding: 2em;
+}
+#container .artists .artist-section {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 1em;
+  color: white;
+  border: 0.25em solid red;
+}
+#container .artists .artist-section h1, #container .artists .artist-section h3, #container .artists .artist-section h4 {
+  color: red;
+}
+#container .artists .artist-section .bio {
+  margin-top: 0.5em;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 2em;
+}
+#container .artists .artist-section .bio p {
+  line-height: 1.25em;
+}
+#container .artists .artist-section .bio img {
+  border: 0.5em solid red;
+  border-radius: 1em;
 }/*# sourceMappingURL=style.css.map */
