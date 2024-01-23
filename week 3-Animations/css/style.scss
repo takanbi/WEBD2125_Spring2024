@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-size: 16px;
+}
+/* Color Theme Swatches in Hex */
+$LightBlue1-hex: #90cbfb;
+$LightBlue2-hex: #3a1adb;
+$LightBlue3-hex: #110066;
+$LightYellow1-hex: #ffd432;
+$LightGrey1-hex: #ffffff;
+$LightGrey2-hex: #919191;
+
+$gradientBackground: linear-gradient(
+  190deg,
+  $LightBlue2-hex 0%,
+  $LightBlue3-hex 100%
+);
+
+@font-face {
+  font-family: lemon-milk;
+  src: url("../font/LEMONMILK-Bold.otf");
+}
+@font-face {
+  font-family: nasalization;
+  src: url("../font/nasalization-rg.otf");
+}
+@font-face {
+  font-family: pacifico;
+  src: url("../font/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: pirulen;
+  src: url("../font/pirulen\ rg.ttf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik:wght@800&family=Spartan&display=swap");
+$Roboto: "Roboto", sans-serif;
+$Rubik: "Rubik", sans-serif;
+$Spartan: "Spartan", sans-serif;
+
+$Pirulen: pirulen;
+$LemonMilk: lemon-milk;
+$Nasa: nasalization;
+$Pacifico: pacifico;
+body {
+  font-family: $Roboto;
+  .cursor {
+    background-color: $LightGrey2-hex;
+    width: 2rem;
+    height: 2rem;
+    border: 0.125rem solid $LightYellow1-hex;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%); //to fix cursor center position
+    // note that we are now unable to select links because of the cursor div and the fact that its is constantly moving
+    // cursor: grow;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    //   transition-property: background-color, transform, border;
+    transition-property: background-color, width, height;
+    //   to solve the problem of the cursor not fitting over the link we need to work with transform origin
+    transform-origin: 100% 100%;
+    //   z-index: -1;//if I wasnt using transparent cursor
+  }
+  div.link-grow {
+    width: 6rem;
+    height: 6rem;
+    background-color: transparent;
+  }
+  #container {
+    width: 100%;
+    height: 100vh;
+    background-color: $LightBlue2-hex;
+    background-image: $gradientBackground;
+    nav {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 10vh;
+        margin: auto;
+        width: 100%;
+        border-bottom: 1px solid $LightBlue1-hex;
+        h1#logo {
+            color: $LightGrey1-hex;
+            font-family: $Pirulen;
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+        ul.nav-links {
+            margin-right: 1rem;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            li {
+                color: $LightGrey1-hex;
+                padding: 1rem;
+                font-family: $Nasa;
+                text-transform: uppercase;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+            li::before {
+                position: absolute;
+                bottom: 0.7rem;
+                content: "";
+                width: 0;
+                height: 0.11rem;
+                background-color: $LightGrey1-hex;
+                opacity: 0;
+                transition: all 500ms ease;
+            }
+            li:hover::before {
+                width: 50px;
+                opacity: 1;
+            }
+        }
+    }
+  }
+}
