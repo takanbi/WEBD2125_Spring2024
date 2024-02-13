@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik:wght@800&family=Spartan&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Color Theme Swatches in Hex */
+@font-face {
+  font-family: lemon-milk;
+  src: url("../font/LEMONMILK-Bold.otf");
+}
+@font-face {
+  font-family: nasalization;
+  src: url("../font/nasalization-rg.otf");
+}
+@font-face {
+  font-family: pacifico;
+  src: url("../font/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: pirulen;
+  src: url("../font/pirulen rg.ttf");
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+body .cursor {
+  background-color: #919191;
+  width: 2rem;
+  height: 2rem;
+  border: 0.125rem solid #ffd432;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background-color, width, height;
+  transform-origin: 100% 100%;
+}
+body div.link-grow {
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+}
+body #container {
+  width: 100%;
+  height: 100vh;
+  background-color: #3a1adb;
+  background-image: linear-gradient(190deg, #3a1adb 0%, #110066 100%);
+}
+body #container nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  margin: auto;
+  width: 100%;
+}
+body #container nav h1#logo {
+  color: #ffffff;
+  font-family: pirulen;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+body #container nav ul.nav-links {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+body #container nav ul.nav-links li {
+  color: #ffffff;
+  padding: 1rem;
+  font-family: nasalization;
+  text-transform: uppercase;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+body #container nav ul.nav-links li::before {
+  position: absolute;
+  bottom: 0.7rem;
+  content: "";
+  width: 0;
+  height: 0.11rem;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+body #container nav ul.nav-links li:hover::before {
+  width: 50px;
+  opacity: 1;
+}
+body section#landing {
+  width: 100%;
+  height: 90vh;
+  background: white;
+  padding: 9em;
+  overflow: hidden;
+  position: relative;
+}
+body section#landing h1 {
+  font-size: 5em;
+  font-family: nasalization;
+  color: #3a1adb;
+  line-height: 1em;
+  width: 35%;
+}
+body section#landing button.cta {
+  margin-top: 50px;
+  background: none;
+  border: 3px solid #3a1adb;
+  font-family: nasalization;
+  font-size: 1.7em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #3a1adb;
+  border-radius: 0.5em;
+  transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+body section#landing button.cta:hover {
+  background: #3a1adb;
+  color: #ffffff;
+  border: 3px solid #ffd432;
+  cursor: pointer;
+}
+body section#landing div.panel {
+  position: absolute;
+  width: 55%;
+  bottom: 0;
+  right: 0;
+  padding: 15% 7%;
+  height: 100%;
+  background: #ffd432;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+body section#landing div.panel svg#light {
+  position: relative;
+  z-index: 2;
+  width: 220px;
+  fill: #3a1adb;
+  float: left;
+  margin-right: 50px;
+  opacity: 0;
+  transform: translateY(-200px);
+}
+body section#landing div.panel p {
+  position: relative;
+  z-index: 2;
+  clear: right;
+  font-size: 1.9em;
+  width: 100%;
+  color: #110066;
+  font-family: lemon-milk;
+  opacity: 0;
+}
+body section#landing div.panel div.box {
+  border: 10px solid #90cbfb;
+  width: 65%;
+  height: 40%;
+  position: absolute;
+  left: -7%;
+  top: 15%;
+  opacity: 0;
+  z-index: 1;
+  transform: scale(0);
+}/*# sourceMappingURL=style.css.map */
