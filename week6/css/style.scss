@@ -69,6 +69,7 @@ body {
     height: 6rem;
     background-color: transparent;
   }
+  
   #container {
     width: 100%;
     height: 100vh;
@@ -175,7 +176,7 @@ body {
         transform: translateY(-200px); //add this after creating TweenMax
       }
      
-      p {
+      p#para {
         position: relative;
         z-index:2;
         clear: right;
@@ -183,7 +184,8 @@ body {
         width: 100%;
         color: $LightBlue3-hex;
         font-family: $LemonMilk;
-        //width: 80%;
+        width: 80%;
+        line-height: 1.5em;
         opacity: 0; //bring back when adding TweenMax
       }
       div.box {
@@ -198,5 +200,51 @@ body {
         transform: scale(0); //bring back when adding TweenMax
       }
     }
+  }
+}
+
+section#sticky {
+  height: 100vh;
+  padding: 3em;
+  position: relative;
+  blockquote {
+    position: absolute;
+    width: 30%;
+    margin-top: 17%;
+    font-size: 2em;
+    span {
+      width: 100%;
+      background: $LightBlue2-hex;
+      display: block;
+      height: 5px;
+      margin-top: 20px;
+    }
+  }
+  img.artshow {
+    position: absolute;
+  }
+  img#artshow1.artshow {
+    width: 640px;
+    height: auto;
+    right: 0;
+    top: 20%;
+  }
+  img#artshow2.artshow {
+    width: 480px;
+    height: auto;
+    right: 40%;
+    top: 30%;
+    margin-top: 10%;
+  }
+  .box {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border: 5px solid $LightGrey2-hex;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
   }
 }
